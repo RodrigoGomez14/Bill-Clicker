@@ -1,0 +1,312 @@
+body{
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction:column;
+    height: 100vh;
+    background: linear-gradient(75deg,#1f437cfa 35%,#04193afa )
+}
+.titulo{
+    height: 100px;
+    position: relative;
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: .9fr .1fr;
+    justify-items: center;
+    align-items: center;
+    color: white;
+    border-bottom: 1px solid black;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
+.titulo h1{
+    margin:0
+}
+.barraBonus{
+    position: absolute;
+    left:0%;
+    bottom: 0%;
+    display: none;
+    border: 1px solid black;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    grid-column: span 2;
+    width: 100%;
+    background: white;
+    border-radius: 25px;
+}
+.img{
+    position:relative;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none
+}
+.img .fas{
+  color:white;
+  font-size:15em
+}
+.menu{
+    position: absolute;
+    top: 0%;
+    right: 0;
+    width: 30%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: .2fr .8fr;
+    overflowX: hidden;
+
+}
+.menuIcon{
+    width: 100%;
+    display: flex;
+    justify-content:flex-end;
+    padding-top: 25px;
+    padding-right: 25px;
+    grid-column: span 2;
+}
+.menuIcon .fas{
+    margin-right: 25px;
+    cursor: pointer;
+    font-size: 50px;
+    color: white;
+
+}
+.menuIconSalir{
+    width: 100%;
+    position: relative;
+    display: none;
+    justify-content: center;
+    padding-top: 25px;
+    grid-column: span 1;
+}
+.menuIconSalir .fas{
+    cursor: pointer;
+    font-size: 50px;
+    color: white;
+
+}
+#coockieImg{
+    width: 35%;
+    font-size: 300px;
+    color: white;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select:none;
+}
+.img .fas:active{
+    transform: scale(.97)
+}
+@keyframes animacionMenu{
+    from{
+        left: 100%;
+    }
+    
+    to{
+        left: 10%;
+
+    }
+}
+@keyframes animacionMenuBoton{
+    from{
+        left: 410%;
+    }
+    
+    to{
+        left: 50%;
+
+    }
+}
+@keyframes animacionMenuReverse{
+    from{
+        left: 10%;
+    }
+    
+    to{
+        left: 110%;
+        display: none
+
+    }
+}
+@keyframes animacionMenuBotonReverse{
+    from{
+        left: 0%;
+    }
+    
+    to{
+        left: 410%;
+        display: none
+    }
+}
+.hide-scroll{
+    overflowX: hidden;
+}
+.buttons{
+    max-height: 100%;
+    overflow: auto;
+    height: 100%;
+    background: linear-gradient(75deg,#1f437cfa 35%,#04193afa );
+    border-left: 1px solid white;
+    display: none;
+    flex-wrap: wrap;
+    position: relative;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+.buttons a{
+    cursor: pointer;
+    height: 10%;
+    display: flex;
+    width: 100%;
+    padding: 0;
+    color: white;
+    justify-content: space-around;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select:none;
+}
+.nombreYPrecioObjetos{
+    height: 100%;
+    margin: 0;
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: .9fr .1fr;
+    justify-items: center;
+    align-items: center;
+}
+.nombreYPrecioObjetos p:nth-of-type(1){
+    grid-row: span 2;
+    text-align: center
+}
+.cantidadObjetos{
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    height: 100%;
+    margin: 0;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nombreYPrecioObjetos p, .cantidadObjetos p{
+    font-size: 15px
+}
+.buttons a p{
+    margin: 0
+}
+.inventario{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.inventario h1{
+    margin: 0;
+    font-size: 25px;
+    text-align: center;
+}
+
+
+
+  /**** PROGRESS     BAR ****/
+
+
+.progress-bar {
+    background-color: rgba(255, 255, 255, 0.4);
+    grid-column: span 3;
+    height: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+    width: 95%;       
+    border-radius: 5px;
+    box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;           
+  }
+  
+  .progress-bar span {
+    display: inline-block;
+    height: 100%;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+    transition: width .4s linear; 
+    background-color: #ccc;  
+  }
+  
+  /**** GRADIENTS ****/
+  
+  .orange span {
+    background-color: #1f437cda  
+  }  
+
+.fondoModal{
+    background: #53535388;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+.modal{
+    padding: 1%;
+    width: 350px;
+    height: 200px;
+    background: white;
+    border-radius: 25px;
+    display: grid;
+    grid-template-rows: .4fr .4fr .2fr;
+    justify-items: center;
+    align-items: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
+@keyframes modalIn{
+    from{
+    transform: translateX(1500px);        
+    }
+    to{
+    transform: translateX(0px);
+    }
+}
+@keyframes modalOut{
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(1500px);        
+    }
+}
+.modal p{
+    margin: 0;
+    font-size: 25px;
+    text-align: center
+}
+.modal a{
+    border-radius: 25px;
+    width: 45%;
+    height: 100%;
+    background: #1f437cda;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select:none;
+}
